@@ -112,7 +112,8 @@ router.get('/user' , auth, async (req, res) =>{
     res.json ({
       username :  user.username,
        id: user._id,
-       email : user.email
+       email : user.email,
+       address : user.address
     })
 })
 

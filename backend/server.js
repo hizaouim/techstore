@@ -74,6 +74,7 @@ const accRouter = require('./routes/users');
 app.use('/articles', articlesRouter);
 app.use('/users', usersRouter);
 app.use('/categories' , categoryRouter);
+app.use('/cart' , cartRouter);
 app.use('/user' , accRouter);
 
 // @route POST

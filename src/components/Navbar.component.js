@@ -6,6 +6,7 @@ import articlesByCat from './ArticlesByCat.component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
+
 const Navbar = (props) => {
 
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -68,14 +69,20 @@ const Navbar = (props) => {
       { userData.user ?
     <ul className='navbar '>
      <li class="nav-item dropdown ">
+        
+          
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i className="fas fa-user p-1"></i>
         {userData.user.username}
+        
+       
         </a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           
           <Link to='/account'>Account</Link>
-          <a class="dropdown-item" href="#">Orders</a>
+          
+          <Link to='/orders'>Orders</Link>
           <Link to='/Upload'>Sell a product</Link>
           <div class="dropdown-divider"></div>
           

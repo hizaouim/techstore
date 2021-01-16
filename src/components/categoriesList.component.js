@@ -25,7 +25,7 @@ const CategoriesList = () => {
     }
     }
     return (
-        <div>
+        <div className='row'>
            {
             dispList()  
            }

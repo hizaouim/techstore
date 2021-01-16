@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Rating from './Rating.component';
 
 const ArticleDetail = (props) => {
     
@@ -27,6 +28,11 @@ const ArticleDetail = (props) => {
             </div>
             <div className="col-9">
             <p><b>{article.title}</b></p>
+            <Rating  value={article.reviews} 
+                                numreviews = {article.numReviews} 
+                        >
+
+                        </Rating>
             <hr/>
             <p>Condition: {article.condition}</p>            
             <p>Year: {article.year}</p>

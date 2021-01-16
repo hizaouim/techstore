@@ -10,7 +10,6 @@ const ArticlesByCat = (props) => {
     useEffect(() => {
         
         console.log('data' +  JSON.stringify (props.match.params.id));
-        
           Axios.get('http://localhost:5000/articles/byCategory/'+props.match.params.id )
         .then(res => {
             console.log('array'+ res.data);

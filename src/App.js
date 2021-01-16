@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 import {BrowserRouter as Router, Route } from 'react-router-dom'
 import articlesList from './components/articlesList.component';
@@ -16,6 +15,7 @@ import ArticlesByCat from './components/ArticlesByCat.component';
 import ArticleDetail from './components/ArticleDetail.component';
 import Cart from './components/Cart.component';
 import Account from './components/Account.component';
+import Footer from './components/Footer'
 
  function App() {
   const [cartArts, setCartArts] = useState(0)
@@ -75,7 +75,7 @@ import Account from './components/Account.component';
       <Route  path="/articles/:id" 
       render={(props) => <ArticleDetail {...props} updateCart={updateCart} />} />
 
-      
+      <Footer></Footer>
       </div>
       </UserContext.Provider>
       

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Rating from './Rating.component'
 
 const Article = (props) => {
     const url = 'http://localhost:5000/articles/image'
@@ -13,6 +14,10 @@ const Article = (props) => {
                     </div>
                     <div className="col-9">
                     <p> <b>  {props.article.title} </b> </p>
+                        <Rating  value={props.article.reviews} 
+                                numreviews = {props.article.numReviews} 
+                        >
+                        </Rating>
                         <hr/>
                         <p>Condition: {props.article.condition}</p>
                         <p><b> {props.article.price}$ </b></p>            

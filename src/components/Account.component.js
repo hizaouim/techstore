@@ -23,6 +23,7 @@ const Account = () => {
             <p>My account:</p>
             <p> Username: {user.username} </p>
             <p>e-mail: {user.email}</p>
+    <p>Adresse: {user.address}</p>
         </div>
     );
 };
